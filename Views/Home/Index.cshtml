@@ -1,0 +1,33 @@
+﻿@model List<Sporcu>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<p>Listemizde @Model.Count adet sporcular</p>
+<table class=" table"> 
+    <thead>
+        <tr>
+            <th> ad soyad</th>
+            <th> cinsiyet </th>
+            <th> branş</th>
+            <th>boy</th>
+            <th>kilo</th>
+        </tr>
+
+    </thead>
+    <TBOdy>
+        @{
+            foreach
+            (var sporcu in Model)
+            {
+                <tr>
+                    <td>@sporcu.ad @sporcu.soyad</td>
+                    <td>@sporcu.cinsiyet </td>
+                    <td>@sporcu.brans</td>
+                    <td>@sporcu.boy</td>
+                    <td>@sporcu.kilo</td>
+                </tr>
+            }
+        }
+    </TBOdy>
+</table>

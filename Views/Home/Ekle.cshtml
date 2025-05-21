@@ -1,0 +1,19 @@
+@model Sporcu
+@{
+    ViewData["Title"] = "Ekle";
+}
+<form asp-action="Ekle" method="post">
+    <div class="form-group">
+        <label asp-for="ad"></label>
+        <input asp-for="ad" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="soyad"></label>
+        <input asp-for="soyad" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="boy"></label>
+        <input asp-for="boy" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
